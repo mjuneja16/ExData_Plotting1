@@ -11,4 +11,4 @@ hist(hpcDataFeb[,3],xlab="Global Active Power (kilowatts)",main="Global Active P
 dev.copy(png,file="plot1.png",width=480,height=480,units="px")
 ##saving the plot to PNG file
 dev.off()
-##saving the PNG device
+##closing the PNG file device

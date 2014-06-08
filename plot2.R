@@ -8,10 +8,11 @@ hpcDataFeb<-subset(hpcData, Date =="2007-02-01" | Date == "2007-02-02" | (Date =
 ##subsetting the data over 2-day period in February 2007
 library(chron)
 hpcDataFeb$DateTime=chron(dates=hpcDataFeb[,1],times=hpcDataFeb[,2],format=c('y-m-d','h:m:s'))
+##Using chron to make Date and Time assemble together under a new column named as "DateTime"
 hpcDataFeb$DateTime<-as.POSIXlt(hpcDataFeb$DateTime,tz="GMT")
 png(filename="plot2.png",width=480,height=480,units="px")
 ##Opening PNG device in the working directory
 plot(hpcDataFeb$DateTime,hpcDataFeb$GAp, type = "s", xlab="", ylab="Global Active Power (kilowatts)")
-##Creating plot and sending it to the PNG device (no plot appears on the screen)
+##creating plot and sending it to the PNG device (no plot appears on the screen)
 dev.off()
 ##closing the PNG file device

@@ -14,5 +14,5 @@ with(hpcDataFeb,{
      points(hpcDataFeb$DateTime,hpcDataFeb$SM1, type = "s")
      points(hpcDataFeb$DateTime,hpcDataFeb$SM2, type = "s",col="orangered")
      points(hpcDataFeb$DateTime,hpcDataFeb$SM3, type = "s",col="blue")})
-legend("topright", lty=1, col = c("black","orangered","blue"), legend = c("Sub_metring_1","Sub_metring_2","Sub_metring_3"))
+legend("topright", lty=1, col = c("black","orangered","blue"), legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 dev.off()

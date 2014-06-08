@@ -8,7 +8,7 @@ library(chron)
 hpcDataFeb$DateTime=chron(dates=hpcDataFeb[,1],times=hpcDataFeb[,2],format=c('y-m-d','h:m:s'))
 hpcDataFeb$DateTime<-as.POSIXlt(hpcDataFeb$DateTime,tz="GMT")
 png(filename="plot4.png",width=480,height=480,units="px")
-par(mfcol=c(2,2), mar=c(4,4,2,1))
+par(mfcol=c(2,2), mar=c(5,5,2,2))
 plot(hpcDataFeb$DateTime,hpcDataFeb$GAp, type = "s", xlab="", ylab="Global Active Power")
 with(hpcDataFeb,plot(hpcDataFeb$DateTime,hpcDataFeb$SM1,type="n",xlab="",ylab="Energy sub metering"))
 with(hpcDataFeb,{

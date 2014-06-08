@@ -9,6 +9,6 @@ hpcDataFeb<-subset(hpcData, Date =="2007-02-01" | Date == "2007-02-02" | (Date =
 hist(hpcDataFeb[,3],xlab="Global Active Power (kilowatts)",main="Global Active Power",col ="orangered")
 ##plotting histogram of Global Active Power on screen device
 dev.copy(png,file="plot1.png",width=480,height=480,units="px")
-##saving the plot to PNG file
+##saving the plot to PNG file device
 dev.off()
 ##closing the PNG file device

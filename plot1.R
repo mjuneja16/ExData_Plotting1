@@ -4,7 +4,7 @@ hpcData$Date<-strptime(as.character(hpcData$Date),"%d/%m/%Y")
 hpcData$Date<-format(hpcData$Date,"%Y-%m-%d")
 hpcData$Time<-strptime(as.character(hpcData$Time),format="%H:%M:%S")
 hpcData$Time<-format(hpcData$Time,"%H:%M:%S")
-hpcDataFeb<-subset(hpcData, Date =="2007-02-01" | Date == "2007-02-02" | (Date == "2007-02-03" & Time == "00:00:00"))
+hpcDataFeb<-subset(hpcData, Date =="2007-02-01" | Date == "2007-02-02")
 ##subsetting the data over 2-day period in February 2007 
 hist(hpcDataFeb[,3],xlab="Global Active Power (kilowatts)",main="Global Active Power",col ="orangered")
 ##plotting histogram of Global Active Power on screen device
